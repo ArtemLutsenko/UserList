@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import * as actionTypes from '../../Store/actions'
 import User from './User/User'
-import './UserList.css'
+import  './UserList.css'
 
 class UserList extends Component {
 
@@ -23,12 +23,12 @@ class UserList extends Component {
         })
 
 
-        const prevPaginationButton = <button onClick = {this.props.prevPage} key = 'prev' className = 'button'>prev</button>
-        const nextPaginationButton = <button onClick = {this.props.nextPage} key = 'next'>next</button>        
+        const prevPaginationButton = <button onClick = {this.props.prevPage} key = 'prev' className = 'container__button prev'>prev</button>
+        const nextPaginationButton = <button onClick = {this.props.nextPage} key = 'next' className = 'container__button next'>next</button>        
         const PaginationNumberButtons = () =>{
             const numberPaginationButtons = []
             for(let i =1; i <= this.props.totalPages; i++){
-                let buttonClassName = 'button'
+                let buttonClassName = 'container__button'
                 if(i === this.props.currentPage){
                     buttonClassName += ' active'
                 }
@@ -49,11 +49,11 @@ class UserList extends Component {
         console.log(buttons);
 
         return(
-            <div>
-            <h1>UserList</h1>
-            {buttons}
-            {displayedUsers}
-            {buttons}
+            <div className = 'container'>
+                <h1>List of Users</h1>
+                <div className = 'container__buttons'>{buttons}</div>                
+                {displayedUsers}
+                <div className = 'container__buttons'>{buttons}</div>
             </div>
         )
     }
