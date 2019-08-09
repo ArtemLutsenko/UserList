@@ -46,7 +46,6 @@ class UserList extends Component {
         }
         
         const buttons = [prevPaginationButton, ...PaginationNumberButtons(), nextPaginationButton ]
-        console.log(buttons);
 
         return(
             <div className = 'container'>
