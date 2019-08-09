@@ -14,6 +14,10 @@
     padding-top: 8px;
 }
 
+.userlist p strong:nth-child(2){
+    padding-left: 20px;
+}
+
 .userlist__image{
     width: 110px;
     height: 110px;

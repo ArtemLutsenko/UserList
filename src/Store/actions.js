@@ -25,7 +25,7 @@ export const prevPage =  () =>{
     }
 }
 
-export const cahgePage =  (id) =>{
+export const changePage =  (id) =>{
     return {
         type: CHANGE_PAGE,
         payload: id

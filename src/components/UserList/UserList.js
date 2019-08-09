@@ -36,7 +36,7 @@ class UserList extends Component {
                     <button
                         key = {i + '1'}
                         className = {buttonClassName}
-                        onClick = {() =>this.props.cahgePage(i)}
+                        onClick = {() =>this.props.changePage(i)}
                     >
                     {i}
                     </button>
@@ -72,7 +72,7 @@ const mapStateToProps = state =>{
         fetchUsers: () => dispatch(actionTypes.fetchUsers()),
         nextPage: ()=> dispatch(actionTypes.nextPage()),
         prevPage: () => dispatch(actionTypes.prevPage()),
-        cahgePage: (id) => dispatch(actionTypes.cahgePage(id))
+        changePage: (id) => dispatch(actionTypes.changePage(id))
     }
 } 
 
